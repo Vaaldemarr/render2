@@ -7,13 +7,15 @@ from aiogram.filters.command import Command
 
 # from config_reader import config
 
+from dotenv import load_dotenv
+
 logging.basicConfig(level=logging.INFO)
 # bot = Bot(token=config.bot_token.get_secret_value())
 
 load_dotenv()
 TOKEN = token=os.environ.get('TOKEN')
 
-bot = Bot(token=TOKEN)
+bot = Bot(TOKEN)
 
 dp = Dispatcher()
 
